@@ -3,8 +3,6 @@
         <div>
             <iframe :src="videoUrl" class="selectedVideo" ></iframe>
         </div>
-
-        <!--Uzerine Tiklanilan Videonun Bilgilerini Ekranda Gosteriyoruz-->
         <div class="details">
             <h4>{{ video.snippet.title }}</h4>
             <p>{{  video.snippet.description }}</p>
@@ -14,8 +12,6 @@
 
 <script>
     export default {
-
-        // Tiklanilan Videonun Bilgisi Geliyor
         props:['video'],
         computed:{
             videoUrl(){

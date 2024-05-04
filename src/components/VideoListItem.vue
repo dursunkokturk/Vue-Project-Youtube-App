@@ -1,13 +1,7 @@
 <template>
-
-    <!--Gonderilen Data lari onVideoSelect Metodu Ile Listeliyoruz-->
     <li class="videoItem" @click="onVideoSelect">
-
-        <!--Videolarin img Bilgilerini Aliyoruz-->
         <img class="videoImg" :src="imageUrl" >
         <div>
-
-            <!--Videolarin Baslik Bilgilerini Aliyoruz-->
             {{ video.snippet.title }}
         </div>
     </li>
@@ -23,9 +17,6 @@
             }
         },
         methods: {
-
-            // video Degiskeni Uzerinden Gelen Data yi
-            // videoSelect Ismi Ile Emit Ediyoruz (Gonderiyoruz)
             onVideoSelect(){
                 this.$emit('videoSelect',this.video)
             }

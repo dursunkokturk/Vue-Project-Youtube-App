@@ -1,10 +1,5 @@
 <template>
     <form class="searchForm" @submit.prevent="handleSubmit">
-
-        <!--Input Elementi Icine Girilen Data yi Almak Ve 
-            Arama Islemi Yapmak Icin
-            v-model Attribute unu Kullanarak 
-            data Method Ile Baglanti Kuruyoruz-->
         <input class="searchInput" v-model="searchTerm" type="text">
         <button class="searchBtn">Ara</button>
     </form>
@@ -20,9 +15,6 @@
         },
         methods: {
             handleSubmit(){
-
-                // Input Elementine Girilen Data yi searchTerm Ile Aliyoruz
-                // Kullanacagimiz Yere termChange Ile Emit Ediyoruz (Gonderiyoruz)
                 this.$emit('termChange',this.searchTerm);
                 this.searchTerm=''
             }
